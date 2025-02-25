@@ -21,7 +21,10 @@ function render()
 {
     result1.innerHTML = ""
     tasks.forEach((item)=>{
-        result1.innerHTML += `<li class="list-group-item mb-2 rounded-1" ondblclick="del(${item.id})"> ${item.task} </li>`
+        result1.innerHTML += `<div class="task" ondblclick="del(${item.id})">
+                                <h4>${item.task} </h4>
+                            </div>`
+        
     })
 }
 
@@ -56,7 +59,9 @@ searchinput.addEventListener("input", ()=>
     result2.innerHTML = ""
     
     temp.forEach((item)=>{
-        result2.innerHTML += `<li class="list-group-item mb-2 rounded-1"> ${item.task} </li>`
+        result2.innerHTML += `<div class="task" ondblclick="del(${item.id})">
+                                <h4>${item.task} </h4>
+                            </div>`
     })
 })
 
